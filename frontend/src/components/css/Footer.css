@@ -1,0 +1,38 @@
+/* Styling for the footer container */
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 40px 20px; /* Padding around the content */
+  text-align: center; /* Center-align text */
+}
+
+/* Styling for the footer title */
+.footer-title {
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold; /* Bold font weight */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Styling for the footer links */
+.footer-links {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+/* Styling for footer links (list items) */
+.footer-links li {
+  margin-bottom: 10px; /* Bottom margin for spacing between items */
+}
+
+/* Styling for footer links (anchor tags) */
+.footer-links li a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center-align items vertically */
+}
+
+/* Styling for icon in footer links */
+.footer-links li a i {
+  margin-right: 10px; /* Right margin for spacing */
+}

@@ -1,0 +1,108 @@
+.dashboard-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top:200px;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(24, 20, 20, 0.987);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  .dashboard-wrapper h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-wrapper form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-wrapper label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .dashboard-wrapper input,
+  .dashboard-wrapper textarea {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .dashboard-wrapper input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+  
+  .dashboard-wrapper input:focus ~ label,
+  .dashboard-wrapper input:valid ~ label,
+  .dashboard-wrapper textarea:focus ~ label,
+  .dashboard-wrapper textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #bdb8b8;
+  }
+  
+  .login-box a:hover {
+    background: #be350f;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #be350f,
+                0 0 25px #be350f,
+                0 0 50px #be350f,
+                0 0 100px #be350f;
+  }
+  .dashboard-wrapper button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dashboard-wrapper button[type="submit"]:hover {
+    background: #be350f;
+    border-color: #be350f;
+    box-shadow: 0 0 5px #be350f, 0 0 25px #be350f, 0 0 50px #be350f, 0 0 100px #be350f;
+  }
+  
+  /* Animation for Button Span */
+  .dashboard-wrapper button[type="submit"] span {
+    position: absolute;
+    display: block;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #be350f);
+    animation: btn-anim1 2s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }

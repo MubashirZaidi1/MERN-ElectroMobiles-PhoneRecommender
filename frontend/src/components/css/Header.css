@@ -1,0 +1,76 @@
+/* Styles for the AppBar */
+.AppBar-root {
+  background-color: #000000; /* Background color of the AppBar */
+  color: #ffffff; /* Text color */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for the AppBar */
+}
+
+/* Styles for the logo image */
+.logo-image {
+  height: 40px; /* Set the height of the logo */
+  margin-right: 10px; /* Margin on the right side */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Scale the logo on hover */
+}
+
+/* Styles for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #a80000; /* White border around the search bar */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Padding inside the search bar */
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-bar:hover {
+  border-color: #be350f; /* Change border color on hover */
+}
+
+/* Styles for the search input */
+.search-input {
+  color: #ffffff; /* Text color of the input */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove default border */
+  outline: none; /* Remove outline on focus */
+  width: 200px; /* Set width of the input */
+}
+
+/* Styles for the navigation buttons */
+.navigation-button {
+  color: #ffffff; /* Text color of the buttons */
+  font-weight: 600; /* Bold font weight */
+  margin-left: 10px; /* Margin between buttons */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navigation-button:hover {
+  transform: translateY(-2px); /* Move button up on hover */
+}
+
+/* Styles for the cart icon in the navigation */
+.cart-icon {
+  color: #ffffff; /* Icon color */
+  margin-right: 5px; /* Margin between icon and text */
+}
+
+/* Styles for the AppBar Toolbar */
+.Toolbar-root {
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  padding: 10px; /* Padding inside the Toolbar */
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .logo-image {
+    height: 30px; /* Decrease the height of the logo for smaller screens */
+  }
+  .search-input {
+    width: 150px; /* Adjust the width of the search input */
+  }
+}

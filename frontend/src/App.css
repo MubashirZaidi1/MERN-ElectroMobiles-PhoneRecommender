@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a Google Font for a clean, modern look */
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark background */
+    color: #fff; /* White text */
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure app takes at least full height of the viewport */
+  }
+  
+  .content {
+    flex: 1; /* Make content area expand to fill remaining space */
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #d32f2f; /* Dark red background for the header */
+    color: #fff; /* White text */
+    padding: 15px;
+    text-align: center;
+    background-image: url('./components/img/Header.jpg'); /* URL to your header image */
+    background-size: cover; /* Cover the entire header area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #000; /* Black background for the footer */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Link Styles */
+  a {
+    color: #d32f2f; /* Red color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff1744; /* Lighter red on hover */
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: black; /* Dark red button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: black; /* Lighter red on hover */
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .content {
+      padding: 10px;
+    }
+  }
+  

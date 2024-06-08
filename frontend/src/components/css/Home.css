@@ -1,0 +1,214 @@
+.featured-products {
+  padding: 20px;
+}
+
+
+.productslisting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8); /* Soft white box shadow */
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Slightly darker shadow on hover */
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ba0b0b;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #fff; /* White title text */
+  font-weight: 700;
+  text-align: center; /* Center align title */
+  text-transform: uppercase; /* Uppercase title */
+}
+
+.card__info {
+  margin: 10px 0 0;
+  font-size: 16px; /* Increased font size for info */
+  color: #ddd; /* Light gray info text */
+  line-height: 1.6;
+  text-align: center; /* Center align info */
+}
+
+.card__description {
+  margin: 20px 0 0; /* Increased top margin for description */
+  font-size: 14px;
+  color: #ddd; /* Light gray description text */
+  line-height: 1.6;
+  text-align: center; /* Center align description */
+}
+
+/* Custom scrollbar for card description */
+.card__description {
+  overflow-y: auto;
+  max-height: 100px; /* Adjust maximum height as needed */
+  scrollbar-width: thin;
+  scrollbar-color: #fff #333; /* White thumb with dark background */
+}
+
+.card__description::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+.card__description::-webkit-scrollbar-thumb {
+  background-color: #fff; /* White scrollbar thumb */
+  border-radius: 3px; /* Rounded corners for scrollbar thumb */
+}
+
+.card__description::-webkit-scrollbar-track {
+  background-color: #333; /* Dark background for scrollbar track */
+}
+
+.product-item {
+  flex: 0 0 calc(50% - 30px); /* Each product item takes up 1/2 of the container width with spacing */
+  max-width: calc(50% - 30px);
+  margin: 15px;
+  text-align: center; /* Center align the product within the grid item */
+}
+
+@media (min-width: 768px) {
+  .product-item {
+    flex: 0 0 calc(33.33% - 30px); /* Each product item takes up 1/3 of the container width with spacing */
+    max-width: calc(33.33% - 30px);
+  }
+}
+
+/* Container styles */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  padding: 80px 20px;
+  background-color: #222222; /* Dark background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+}
+
+/* Header styles */
+.header-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Increased letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.header-text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #be350f; /* Red button color */
+  border: 2px solid #be350f; /* Matching border color */
+  border-radius: 25px; /* Rounded button shape */
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #be350f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-text {
+    padding: 60px 20px;
+  }
+  
+  .header-text h1 {
+    font-size: 3rem;
+  }
+  
+  .header-text p {
+    font-size: 1.25rem;
+  }
+  
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333333; /* Dark text color */
+  position: relative; /* Enable pseudo-element positioning */
+
+  /* Gradient text effect */
+  background: linear-gradient(to right, #ff6b6b, #556270);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation effect */
+  animation: gradientAnimation 5s ease infinite;
+
+  /* Shadow effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

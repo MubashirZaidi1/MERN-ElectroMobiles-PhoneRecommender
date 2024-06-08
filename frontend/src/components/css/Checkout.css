@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  justify-content: center;
+  margin-bottom: 50px; /* Center align items vertically */
+  height: 100vh; /* Set height to 100% of viewport height */
+}
+.text-3xl {
+  font-size: 3rem; /* Larger font size */
+  font-weight: bold; /* Bold font weight */
+  color: #ba0b0b; /* Red color */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 100px; /* Bottom margin for spacing */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Increased letter spacing */
+  position: relative; /* Position relative for pseudo-element */
+}
+
+/* Pseudo-element for decorative underline */
+.text-3xl::after {
+  content: ''; /* Empty content */
+  display: block; /* Display as block element */
+  position: absolute; /* Position absolute */
+  bottom: -10px; /* Offset from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 100px; /* Width of underline */
+  height: 4px; /* Height of underline */
+  background-color: #ba0b0b; /* Red color */
+  border-radius: 2px; /* Rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-3xl {
+    font-size: 2.5rem; /* Decrease font size on smaller screens */
+  }
+}
+.input-container {
+  position: relative;
+  margin-bottom: 60px; /* Add margin bottom to create spacing between input containers */
+}
+
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #b10d20;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #b10d20;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.labelemail {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #b10d20;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #b10d20;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #b10d20;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .labelemail {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.button-place-order {
+  background-color: #48050d;
+  color: white;
+  border-color: #b10d20;
+  padding: 15px 40px; /* Adjust padding as needed */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.5s;
+  margin-top: 20px; /* Add margin top to create spacing */
+}
